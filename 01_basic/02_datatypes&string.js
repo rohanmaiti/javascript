@@ -1,3 +1,9 @@
+// *Data types in JS
+// *#Premitive 
+// number, string, boolean, undefined, null, NaN, symbol
+// *#Non-Premitive
+// Object, Array, Function, Date
+
 
 // let name = "Rohan"
 // let age = 30
@@ -105,6 +111,8 @@
 // console.log(parseFloat("20+2"));
 // console.log(parseFloat(parseInt(parseFloat(20/3))));
 
+
+// * some math
 // let a = 20/10;
 // console.log(a);
 // let b = 20/3;
@@ -118,7 +126,7 @@
 
 
 // *************
-
+// * use of 'use strict'
 // 'use strict'
 // var var1 = 10;
 // console.log(var1);
@@ -129,15 +137,13 @@
 // console.log(var1); // 
 
 
-
-// how this internally working ?
+// * find out how this internally working ?
 // console.log(a);
 // a = 10;
 // console.log(a);
 // var a;
 
-
-
-console.log(a);
-let a = 10;
+// * find out why this gives error ?
+// console.log(a);
+// let a = 10;
 

@@ -87,13 +87,13 @@
 // # let and const are scoped to the block in which they are declared.
 
 // *MCQ
-function outer() {
-  var x = 10;
-  function inner() {
-    console.log(x);
-    var x = 5;
-  }
-  inner();
-}
-outer();
+// function outer() {
+//   var x = 10;
+//   function inner() {
+//     console.log(x);
+//     var x = 5;
+//   }
+//   inner();
+// }
+// outer();
 
