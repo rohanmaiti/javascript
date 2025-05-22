@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: 220px;
+            height: 150px;
+            border:1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+        }
+        input{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+             <input type="text" name="" id="name" placeholder="enter your name">
+             <br><br>
+             <input type="text" name="" id="section" placeholder="enter your section">
+             <br><br>
+             <button type="submit">submit</button>
+
+    </form>
+</body>
+<script>
+    const table = document.createElement('table');
+        table.setAttribute('id','table');
+        table.setAttribute('border','1');
+        document.body.append(table);
+
+        const thead = document.createElement('thead');
+        thead.setAttribute('id','thead');
+        document.querySelector('#table').append(thead);
+
+        const tbody = document.createElement('tbody');
+        tbody.setAttribute('id','tbody');
+        document.querySelector('#table').append(tbody);
+
+        let array = ['Name','Section']
+        for(let i=0;i<2;i++)
+        {
+            let th = document.createElement('th');
+            th.innerHTML = array[i];
+            document.querySelector('#thead').append(th);
+        }
+    //table basic struction
+    let arr = [];
+     document.querySelector('#form').addEventListener('submit',doWork);
+     function doWork(e){
+        let obj = {};
+        e.preventDefault();
+        obj.name = e.target.name.value; //  ||  document.getElementById('name').value;
+        obj.section = e.target.section.value;
+        createBody(obj);
+        arr.push(obj);// [{name:rohan,section:d},{name:tamanna,section:e}]
+        localStorage.setItem('id',JSON.stringify(arr));
+     }
+
+     function createBody(obj){
+                let tr = document.createElement('tr');
+                document.querySelector('#tbody').append(tr);
+                
+                for(const key in obj) {
+                    // console.log(obj[key]);
+                    let td = document.createElement('td');
+                    td.innerHTML = obj[key];
+                    tr.append(td);
+                }
+        }
+        window.addEventListener('load',function (){
+              let x = JSON.parse(localStorage.getItem('id'));
+              x.forEach((ele)=>{
+                createBody(ele);
+              })
+        })
+</script>
+</html>

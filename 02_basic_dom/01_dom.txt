@@ -1,0 +1,72 @@
+1. getElementById()If the element is found, the method will return the element as an object (in element).If the element is not found, element will contain null.
+2. getElementsByTagName()
+3. getElementsByClassName()
+4. getElementsByName()
+5. querySelector()
+6. querySelectorAll()
+
+
+7. innerHTML
+8. innerText
+9. style.property
+10. style
+11. setAttribute(att,val)
+12. getAttribute(att)
+
+
+13. createElement(ele)
+14. removeChild(ele) 
+15. appendChild(ele)
+
+16. document.createElement(element)	Create an HTML element
+17. document.removeChild(element)	Remove an HTML element
+18. document.appendChild(element)	Add an HTML element
+19. document.replaceChild(new, old)	Replace an HTML element
+20. document.write(text)	Write into the HTML output stream
+
+21. forEach , map , filter 
+22. ternary oprator 
+
+
+
+
+16.document.getElementById().onclick = function()
+                                     {  
+                                       // code 
+                                     }
+
+
+circuit , 
+
+
+
+
+3rd st fee :
+ 
+CP-1  questions for % marks  
+sum of  1st n terms , 
+factorial of number , 
+find odd and even digits form  a number 
+find product ,
+lcm,
+gcd,
+amstrong,
+reverse a number,
+fabonakki series,
+prime factor,
+count total even and odd number in an array,
+find total character and number in an array,
+find smallest , largest number of an array,
+find kth largest number of an array'
+{
+DOM 10 marks :
+object to table : and store in local storage : and 
+
+button click  pe element display karna (image chanage karna , style change karna, img border , height width change karna,array me element dalna , id add karna , classes add karna , obj mil sakta hai usse elements crate karna hai)
+}
+
+
+haker earth, stake over flow, fiber , 
+HTML,CSS, API , Promise , 
+
+

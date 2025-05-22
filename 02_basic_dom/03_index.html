@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="rohan" class="tamanna">this is a H1 tag</h1>
+
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+        <li>gsf</li>
+        <li>dg</li>
+        <li>sdg</li>
+      </ul>
+
+    <script>
+
+        let x = document.querySelector('h1')
+        console.log(x);
+        x.style = 'color:red;background-color:yellow;font-size:40px;';
+        // x.remove();
+        // x.removeAttribute('id');
+        // x.removeAttribute('class');
+        //removeChild
+        //replaceChild
+
+
+        
+       
+
+
+  const list = document.getElementById("myList");
+  let textNode = document.createTextNode("Water");
+  list.replaceChild(textNode ,list.childNodes[4])
+//   list.removeChild(list.children[3]); 
+//   console.log(list);
+       
+
+// const newNode = document.createTextNode("Water");
+// var newNode = "water"
+    </script>
+</body>
+</html>

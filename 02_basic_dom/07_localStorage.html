@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script>
+    //    let var1 = 'rohan';
+    //    let array = ['rohan','rahul','maa','baba']
+    //    let array02 = [{name:"rohan",sec:"D"},{name:'Tamanna',sec:'E'}]
+       let obj1 = {name:"rohan",sec:"D"};
+       let obj2 = {name:'Tamanna',sec:'E'};
+       let emptyArray = [];
+       emptyArray.push(obj1);
+       emptyArray.push(obj2);
+
+       localStorage.setItem('key',JSON.stringify(emptyArray));
+       let x = JSON.parse(localStorage.getItem('key'));
+       console.log(x);
+    </script>
+</body>   
+</html>

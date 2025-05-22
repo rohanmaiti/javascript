@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="inputArea">
+      <p></p>
+    </div>
+    <script>
+      let array = [5, 8, 6, 7, 4, 2, 6, 2, 4, 8, 1];
+    document.querySelector('p').innerHTML = array;
+
+
+      let input = document.createElement("input");
+      input.type = "number";
+      input.id = "elementTxt";
+      document.querySelector("#inputArea").append(input);
+
+      let button = document.createElement("button");
+      button.innerHTML = "Delete Element";
+      button.setAttribute("id", "btnDelete");
+      document.querySelector("#inputArea").append(button);
+      button.addEventListener("click", deleteArray);
+
+      function deleteArray() {
+        let value = document.querySelector("#elementTxt").value;
+        array.map((ele,index,array)=>{
+            if(ele==value)
+            {
+                array.splice(index,1);
+            }
+        })
+        document.querySelector('p').innerHTML = array;
+        console.log(array);
+      }
+    </script>
+  </body>
+</html>

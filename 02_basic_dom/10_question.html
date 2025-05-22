@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="table" border='1'>
+    </table>
+    <script>
+        async function x(){
+
+            let respose = await fetch('https://dummyjson.com/users');
+            let data =await respose.json();
+            console.log(data);
+            let user = data.users;
+            console.log(user)
+            // user.map((ele)=>{
+            //     table(ele);
+            // })
+            document.write(JSON.stringify(user))
+        }
+        function table(obj){
+           let tr = document.createElement('tr');
+           document.getElementById('table').append(tr);
+           let td1 = document.createElement('td');
+           let td2 = document.createElement('td');
+           let td3 = document.createElement('td');
+           td1.innerHTML = obj.id;
+           td2.innerHTML = obj.firstName;
+           td3.innerHTML = obj.lastName;
+
+           tr.append(td1,td2,td3);
+        }
+        x();
+    </script>
+</body>
+</html>

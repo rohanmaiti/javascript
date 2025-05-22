@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #demo{
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+    }
+</style>
+<body>
+    <div id="demo">
+    </div>
+    <div id="demo2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quis!</p>
+    </div>
+
+    <button id="addbdr">add border</button>
+    <button id="rmvbdr">remove border</button>
+
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <button id="ib">increase border</button>
+    <button id="rb">decrease border</button>
+    <button id="delete">delete</button>
+
+    <script>
+        document.querySelector('#delete').addEventListener('click',()=>{
+            document.getElementById('demo').style = 'display:none;'
+        })
+
+        let var2 = 3
+  
+        document.getElementById('addbdr').addEventListener('click',()=>{
+            document.getElementById('demo2').style = `border:${var2}px solid black;`
+        })
+
+        document.getElementById('rmvbdr').addEventListener('click',()=>{
+            document.getElementById('demo2').style = 'border:none;'
+        })
+
+
+
+        let var1 = 20;
+        document.getElementById('plus').addEventListener('click',()=>{
+        var1++;
+        document.getElementById('demo2').style = `font-size:${var1}px;`
+    })
+    document.getElementById('minus').addEventListener('click',()=>{
+        var1--;
+        document.getElementById('demo2').style = `font-size:${var1}px;`
+    })
+
+    document.getElementById('ib').addEventListener('click',()=>{
+        var2++;
+        document.getElementById('demo2').style = `border:${var2}px solid black;`
+    })
+    document.getElementById('rb').addEventListener('click',()=>{
+        var2--;
+        document.getElementById('demo2').style = `border:${var2}px solid black;`
+    })
+
+    </script>
+
+</body>
+</html>

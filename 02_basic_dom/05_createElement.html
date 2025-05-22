@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let h1 = document.createElement('h1');
+        h1.setAttribute('id','heading-1');
+        h1.innerHTML = 'This is a Heading tag';
+        // document.body.append(h1);
+        let div = document.createElement('div');
+        div.id = 'div-1';
+        div.style = 'border:3px solid black;width:400px;height:200px;'
+        document.body.append(div);
+         document.querySelector('#div-1').append(h1);
+        // document.body.append(div);
+
+
+    </script>
+</body>
+</html>

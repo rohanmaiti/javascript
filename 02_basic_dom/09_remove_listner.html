@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <p id="p1" class="ptag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sunt.</p>
+        <p id="p2" class="ptag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sunt.</p>
+        <p id="p3" class="ptag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sunt.</p>
+        <p id="p4" class="ptag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, sunt.</p>
+    </div>
+    <h2 id="h21"><p id="p5:ptag">Lorem ipsum dolor sit amet.</p></h2>
+         <input type="text" id="name" placeholder="enter your first name" name="fname">
+         <input type="text" placeholder="enter your last name" name="lname">
+
+         <script>
+            document.querySelector('#name').addEventListener('click',xyz);
+            function xyz(){
+                alert('Hello');
+            }
+
+            function abc(){
+                document.querySelector('#name').removeEventListener('click',xyz);
+            }
+            abc();
+         </script>
+</body>
+</html>

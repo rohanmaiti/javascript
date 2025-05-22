@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <input type="text" name="" id="name" placeholder="Enter your name"> <br> <br>
+        <input type="number" id="id" placeholder="enter your Id"> <br> <br>
+        <button type="submit" >submit</button>
+    </form>
+
+      <div id="display"></div>
+    <script>
+       
+    const table = document.createElement('table');
+    table.setAttribute('border','1');
+    table.id = 'table';
+    document.getElementById('display').append(table);
+    
+    let thead = document.createElement('thead');
+    thead.setAttribute('id','thead');
+    document.querySelector('#table').append(thead);
+    
+    let tbody = document.createElement('tbody');
+    tbody.setAttribute('id','tbody');
+    document.querySelector('#table').append(tbody);
+
+    let array = ['Name','Id'];
+    for(let i=0;i<2;i++)
+    {
+        let th = document.createElement('th');
+        th.innerHTML = array[i];
+        document.querySelector('#thead').append(th);
+    }
+
+    function createBody(obj){
+         let tr = document.createElement('tr');
+         document.querySelector('#tbody').append(tr);
+         for(const key in obj)
+         {
+            let td = document.createElement('td');
+            td.innerHTML = obj[key];
+            tr.append(td);
+         }
+    }
+    let arr = [];
+    document.querySelector('#form').addEventListener('submit',doWork)
+    function doWork(e){
+        e.preventDefault();
+        let obj = {};
+        obj.name = e.target.name.value;    // xyz
+        obj.id =  document.getElementById('id').value;  // 1010
+        createBody(obj);
+        arr.push(obj); //[{name:rohan,id:1314},{name:"xyz",id:1010}]
+        localStorage.setItem('id',JSON.stringify(arr));
+    }
+
+    window.addEventListener('load',localMemory);
+    function localMemory(){
+        let array = JSON.parse(localStorage.getItem('id')); //[{name:rohan,id:1314},{name:"xyz",id:1010}]
+        array.forEach((ele)=>{
+            createBody(ele);
+        })
+    }
+
+    </script>
+</body>
+</html>
