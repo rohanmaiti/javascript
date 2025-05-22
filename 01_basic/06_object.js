@@ -32,6 +32,29 @@
 // Person[x] = 40;
 // console.log(Person)
 
+// * Object.keys() | Object.values();
+// const obj = {
+//     name1:"Rohan",
+//     name2:"Rahul",
+//     name3:"Tamanna",
+// }
+// const keys = Object.keys(obj);
+// console.log(keys);
+
+// const values = Object.values(obj);
+// console.log(values);
+
+// const entries = Object.entries(obj);
+// console.log(entries);
+
+// * hasOwnProperty
+// console.log(obj.hasOwnProperty("name1"));
+// console.log(obj.hasOwnProperty("name"));
+
+// * how to delete keys of any obj?
+// delete(obj.name1);
+// console.log(obj);
+
 // * DESTRUCTUREING
 // const user = {
 //     name:"Rohan",
@@ -42,7 +65,7 @@
 // console.log(name , role , x);
 // * NAME should be exactly same
 
-// * what is KEY Names are not same ?
+// * what if KEY Names are not same ?
 // const {a, b, c} = user;
 // console.log(a, b, c); // undfine, undefine, undefine
 
