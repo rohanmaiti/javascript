@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const myPromise = new Promise((resolve, reject) => {
+        // // we do time consuming task here like fetching data from server
+        setTimeout(() => {
+          if (true) resolve("data:A");
+          else reject("data:B");
+        }, 5000);
+      });
+      //   console.log(myPromise);
+
+      // handling using then and catch
+      //   myPromise
+      //     .then((res) => {
+      //       console.log(myPromise);
+      //       console.log(res);
+      //     })
+      //     .catch((rej) => {
+      //       console.log(myPromise);
+      //       console.log(rej);
+      //     });
+
+      // handling using async await
+      async function doTask() {
+        const res = await myPromise;
+        console.log("res", res); // <-- This prints the resolved value after 5 seconds
+        return res;
+      }
+      console.log(doTask()); // <-- This prints a Promise immediately
+    </script>
+  </body>
+</html>
