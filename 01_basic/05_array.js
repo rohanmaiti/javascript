@@ -141,7 +141,7 @@ let spliceVariable  = array3.splice(2,3);// * first parameter: idex from where t
 // console.log(typeof selectedColors) //* type of array = object
 // console.log("the size of the array is :"+selectedColors.length)
 
-// *DESTRUCTURE
+// *DESTRUCTUREING A ARRAY
 // let arr = ["Rohan", "SDE", 3, "Maiti"];
 // let [name,role,x] = arr;
 
