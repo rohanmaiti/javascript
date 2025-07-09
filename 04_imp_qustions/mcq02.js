@@ -15,6 +15,7 @@
 // console.log("E "+typeof null);  // object
 // console.log("F "+typeof NaN); 
 
+
 // let name = "Rohan"
 // let age = 30
 // let isApprove = false
