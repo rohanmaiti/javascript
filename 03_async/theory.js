@@ -10,6 +10,7 @@
 // They help avoid callback hell and make it easier to work with asynchronous code by providing a way to chain operations and handle errors.
 
 // * what is callback hell ? with example
+// >> it is a situation of multiple asynchronous operations, and each one depends on the result of the previous one.
 // example of callback hell:
 // function fetchData(callback) {
 //     setTimeout(() => {
