@@ -8,24 +8,24 @@ const myPromise = new Promise((resolve, reject) => {
 console.log(myPromise);
 
 // how to handle a promise ? type-1 : using then and catch; type-2 : using async await
-myPromise
-  .then((res) => {
-    console.log(myPromise);
-    console.log(res);
-  })
-  .catch((rej) => {
-    console.log(myPromise);
-    console.log(rej);
-  });
+// myPromise
+//   .then((res) => {
+//     console.log(myPromise);
+//     console.log(res);
+//   })
+//   .catch((rej) => {
+//     console.log(myPromise);
+//     console.log(rej);
+//   });
 
-// type-2 : usinf async await
+// type-2 : using async await
 // async function doTask(){
-    // const res = await myPromise;
-    // console.log(res);
-    // return res;
+//     const res = await myPromise;
+//     console.log(res);
+//     return res;
 // }
-// console.log(doTask());
 
+// console.log(doTask());
 
 // fucntion er moddhe r ekta indipendent vabe
 // fetch("https://dummyjson.com/users") // returns promise ---> 3 state | 1. fullfilled 2.pending 3. rejected
