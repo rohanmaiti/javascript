@@ -97,3 +97,13 @@
 // }
 // outer();
 
+// what is TDZ ? --> Temporal Dead Zone is the time between the entering of the block scope and the actual declaration of the variable. In this zone, the variable cannot be accessed.
+// example of TDZ
+// {
+//   console.log(a); // ReferenceError: Cannot access 'a' before initialization
+//   let a = 10;
+//   console.log(a); // 10
+// }
+// as a is delared with let so it is in TDZ until it is initialized. same for const variables 
+// 
+
